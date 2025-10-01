@@ -1,0 +1,10 @@
+function script.update(dt)
+    local car = ac.getCar(0)
+    if not car then return end
+
+    -- Reparar si hay cualquier daño
+    if car.damage > 0.0 then
+        car:repair()
+        ac.debug("Reparación inmediata aplicada")
+    end
+end
