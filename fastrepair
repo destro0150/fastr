@@ -1,0 +1,7 @@
+function script.update(dt)
+    local car = ac.getCar(0) -- tu coche
+    if car.isDamaged then
+        -- Resetear daños si el server lo permite
+        car:repair()
+    end
+end
